@@ -1,19 +1,19 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowUpRight, Check, Star } from "lucide-react";
-  import heroImg from "@/assets/hero.jpg";
-  import heroImg2 from "@/assets/hero2.jpg";
-  import cityImg from "@/assets/city.jpg";
-  import teamImg from "@/assets/team.jpg";
-  import servicesImg from "@/assets/services.jpg";
-  import advisorImg from "@/assets/advisor.jpg";
-  import professionalImg from "@/assets/professional.jpg";
-  import team2Img from "@/assets/team2.jpg";
-  import img2 from "@/assets/2.jpg";
-  import { services, articles } from "@/lib/site-data";
-  import { ConsultationCTA } from "@/components/site/ConsultationCTA";
-  import { Reveal } from "@/components/site/Reveal";
-  import { AboutSection } from "./about";
-  import { ServicesSection } from "./services";
+import heroImg from "@/assets/hero.jpg";
+import heroImg2 from "@/assets/hero2.jpg";
+import cityImg from "@/assets/city.jpg";
+import teamImg from "@/assets/team.jpg";
+import servicesImg from "@/assets/services.jpg";
+import advisorImg from "@/assets/advisor.jpg";
+import professionalImg from "@/assets/professional.jpg";
+import team2Img from "@/assets/team2.jpg";
+import img2 from "@/assets/2.jpg";
+import { services, articles } from "@/lib/site-data";
+import { ConsultationCTA } from "@/components/site/ConsultationCTA";
+import { Reveal } from "@/components/site/Reveal";
+import { AboutSection } from "./about";
+import { ServicesSection } from "./services";
 import { ContactSection } from "./contact";
 
 export const Route = createFileRoute("/")({
@@ -225,7 +225,8 @@ function QuoteBanner() {
               in your business tells the truth - and works for you.
             </p>
             <p className="mt-8 text-sm uppercase tracking-[0.2em] text-gold">
-              - Stephen Reeves, Founder & Managing Partner
+              - Jonathan Stephen MSc. CPA <br />
+              Accountant • Entrepreneur • Investor • Business Strategist
             </p>
           </div>
         </Reveal>

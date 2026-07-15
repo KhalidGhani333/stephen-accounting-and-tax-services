@@ -173,7 +173,7 @@ export const articles: Article[] = [
     title: "Seven Year-End Moves That Reduce Your 2026 Tax Bill",
     excerpt: "Simple, legal strategies most small business owners overlook - from Section 179 to retirement contributions and charitable bunching.",
     readTime: "6 min read",
-    author: "Stephen Reeves, CPA",
+    author: ", CPA",
     sections: [
       { p: "As December approaches, the window for reducing your 2026 tax bill is closing fast. Unlike April, year-end moves require action before midnight on December 31. Here are seven strategies our CPAs implement for clients every year." },
       { h: "1. Accelerate Section 179 and Bonus Depreciation", p: "If your business is profitable, purchasing equipment, vehicles, or software before December 31 lets you deduct the full cost in 2026. Section 179 allows up to $1,220,000 in deductions for 2026, with bonus depreciation at 40% on qualifying assets placed in service this year. Businesses near the phase-out range should prioritize smaller-ticket items first." },

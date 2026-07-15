@@ -37,7 +37,7 @@ export function AboutSection() {
               From a single office to a firm serving 500+ clients nationwide.
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              Stephen Reeves founded the firm in 2004 with one belief: small and mid-market businesses
+             Jonathan Stephen founded the firm with one belief: small and mid-market businesses
               deserve the same advisory work Fortune 500 companies receive. What began as a one-person
               practice has grown into a team of licensed CPAs, EAs, and analysts serving hundreds of
               clients across the United States.

@@ -48,6 +48,7 @@ export function Footer() {
               <li><Link to="/" hash="home" className="hover:text-gold">Home</Link></li>
               <li><Link to="/" hash="about" className="hover:text-gold">About</Link></li>
               <li><Link to="/" hash="services" className="hover:text-gold">Services</Link></li>
+              <li><Link to="/" hash="reviews" className="hover:text-gold">Reviews</Link></li>
               <li><Link to="/" hash="contact" className="hover:text-gold">Contact</Link></li>
             </ul>
           </div>
@@ -56,8 +57,8 @@ export function Footer() {
             <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Contact</h3>
             <ul className="mt-5 space-y-4 text-sm text-white/80">
               <li className="flex gap-3">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-                <span>420 Financial Plaza, Suite 1800<br />Chicago, IL 60601</span>
+                {/* <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" /> */}
+                {/* <span>420 Financial Plaza, Suite 1800<br />Chicago, IL 60601</span> */}
               </li>
               <li className="flex gap-3">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
@@ -65,7 +66,7 @@ export function Footer() {
               </li>
               <li className="flex gap-3">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-                <a href="mailto:hello@stephenaccounting.com">hello@stephenaccounting.com</a>
+                <a href="mailto:info@stephenaccounting.com">info@stephenaccounting.com</a>
               </li>
             </ul>
             <div className="mt-5 text-sm text-white/60">

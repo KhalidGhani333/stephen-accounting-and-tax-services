@@ -1,5 +1,5 @@
 import { createFileRoute, Navigate } from "@tanstack/react-router";
-import { ArrowRight, Check, Facebook, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
+import { ArrowRight, Check, Facebook, Linkedin, Mail, Phone, Twitter } from "lucide-react";
 import { useState } from "react";
 import { Reveal } from "@/components/site/Reveal";
 import { services } from "@/lib/site-data";
@@ -154,13 +154,6 @@ function ContactDetails() {
       <div className="rounded-3xl bg-navy p-7 text-white">
         <p className="eyebrow text-gold">Contact Details</p>
         <ul className="mt-5 space-y-4 text-sm">
-          <li className="flex gap-4">
-            <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
-            <div>
-              <p className="font-semibold text-white">Office</p>
-              <p className="text-white/70">420 Financial Plaza, Suite 1800<br />Chicago, IL 60601</p>
-            </div>
-          </li>
           <li className="flex gap-4">
             <Phone className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
             <div>

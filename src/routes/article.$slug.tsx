@@ -27,8 +27,8 @@ export const Route = createFileRoute("/article/$slug")({
       <div>
         <p className="eyebrow">404</p>
         <h1 className="mt-3 font-serif text-4xl font-bold text-navy">Article not found</h1>
-        <Link to="/resources" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold">
-          <ArrowLeft className="h-4 w-4" /> Back to Resources
+        <Link to="/" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold">
+          <ArrowLeft className="h-4 w-4" /> Back to Home
         </Link>
       </div>
     </div>
@@ -49,8 +49,8 @@ function ArticleDetail() {
           <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-teal/20 blur-3xl" />
         </div>
         <div className="container-x relative animate-fade-up pb-16">
-          <Link to="/resources" className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-gold transition-colors">
-            <ArrowLeft className="h-4 w-4" /> Back to Resources
+          <Link to="/" className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-gold transition-colors">
+            <ArrowLeft className="h-4 w-4" /> Back to Home
           </Link>
           <span className="mt-6 inline-block rounded-full bg-teal/20 px-3 py-1 text-xs font-semibold text-teal">
             {article.category}
@@ -74,7 +74,7 @@ function ArticleDetail() {
           <img
             src={coverImages[articleIndex % coverImages.length]}
             alt={article.title}
-            className="h-full w-full object-cover opacity-60"
+            className="h-full w-full object-cover object-top opacity-60"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-navy/30" />
         </div>

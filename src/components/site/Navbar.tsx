@@ -3,11 +3,11 @@ import { Menu, Phone, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const links = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
-  { to: "/services", label: "Services" },
-  { to: "/resources", label: "Tax Resources" },
-  { to: "/contact", label: "Contact" },
+  { to: "/", hash: "home", label: "Home" },
+  { to: "/", hash: "about", label: "About" },
+  { to: "/", hash: "services", label: "Services" },
+  { to: "/", hash: "reviews", label: "Reviews" },
+  { to: "/", hash: "contact", label: "Contact" },
 ] as const;
 
 export function Navbar() {
@@ -32,15 +32,16 @@ export function Navbar() {
           <img
             src="/logo.png"
             alt="Stephen Accounting and Tax Service"
-            className="h-12 w-auto"
+            className="h-16 w-auto"
           />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
           {links.map((l) => (
             <Link
-              key={l.to}
+              key={l.to + l.hash}
               to={l.to}
+              hash={l.hash}
               className="text-sm font-medium text-navy/80 transition-colors hover:text-navy"
               activeProps={{ className: "text-navy" }}
               activeOptions={{ exact: l.to === "/" }}
@@ -52,11 +53,11 @@ export function Navbar() {
 
         <div className="flex items-center gap-3">
           <a
-            href="tel:+18005550142"
+            href="tel:+14694077051"
             className="hidden items-center gap-2 text-sm font-medium text-navy md:flex"
           >
             <Phone className="h-4 w-4 text-gold" />
-            (800) 555-0142
+            469-407-7051
           </a>
           <Link to="/contact" className="btn-gold hidden md:inline-flex text-sm">
             Book Consultation
@@ -77,8 +78,9 @@ export function Navbar() {
           <div className="container-x flex flex-col gap-1 py-4">
             {links.map((l) => (
               <Link
-                key={l.to}
+                key={l.to + l.hash}
                 to={l.to}
+                hash={l.hash}
                 onClick={() => setOpen(false)}
                 className="rounded-lg px-3 py-3 text-sm font-medium text-navy hover:bg-secondary"
               >

@@ -226,7 +226,7 @@ function QuoteBanner() {
             </p>
             <p className="mt-8 text-sm uppercase tracking-[0.2em] text-gold">
               - Jonathan Stephen MSc. CPA <br />
-              Accountant • Entrepreneur • Investor • Business Strategist
+              
             </p>
           </div>
         </Reveal>

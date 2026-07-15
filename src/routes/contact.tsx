@@ -2,12 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, Check, Facebook, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
 import { useState } from "react";
 import { PageHero } from "@/components/site/PageHero";
+import { Reveal } from "@/components/site/Reveal";
 import { services } from "@/lib/site-data";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Stephen Accounting & Tax Services" },
+      { title: "Contact - Stephen Accounting & Tax Services" },
       { name: "description", content: "Book a free consultation with our team. Call, email, or visit our Chicago office. We respond within one business day." },
       { property: "og:title", content: "Contact Stephen Accounting & Tax Services" },
       { property: "og:description", content: "Book your free consultation. We respond within one business day." },
@@ -31,29 +32,35 @@ function Contact() {
       <PageHero
         eyebrow="Get In Touch"
         title="Let's start a conversation about your numbers."
-        subtitle="Book a free 30-minute consultation with a licensed advisor. No pressure, no obligation — just clear answers to your questions."
+        subtitle="Book a free 30-minute consultation with a licensed advisor. No pressure, no obligation - just clear answers to your questions."
         breadcrumb="Contact"
       />
 
       <section className="container-x py-20 md:py-28">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr]">
-          <ConsultationForm />
-          <ContactDetails />
+          <Reveal from="left">
+            <ConsultationForm />
+          </Reveal>
+          <Reveal from="right" delay={80}>
+            <ContactDetails />
+          </Reveal>
         </div>
       </section>
 
-      <section className="container-x pb-24">
-        <div className="overflow-hidden rounded-3xl border border-border">
-          <div className="relative h-80 md:h-[26rem]">
-            <iframe
-              title="Office location map"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-87.6414%2C41.8760%2C-87.6214%2C41.8880&layer=mapnik&marker=41.8819%2C-87.6278"
-              className="h-full w-full"
-              loading="lazy"
-            />
+      <Reveal from="bottom" threshold={0.05}>
+        <section className="container-x pb-24">
+          <div className="overflow-hidden rounded-3xl border border-border">
+            <div className="relative h-80 md:h-[26rem]">
+              <iframe
+                title="Office location map"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-87.6414%2C41.8760%2C-87.6214%2C41.8880&layer=mapnik&marker=41.8819%2C-87.6278"
+                className="h-full w-full"
+                loading="lazy"
+              />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </Reveal>
     </>
   );
 }

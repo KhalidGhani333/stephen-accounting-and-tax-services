@@ -3,6 +3,7 @@ import { ArrowRight, Check } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { ConsultationCTA } from "@/components/site/ConsultationCTA";
 import { HowItWorks } from "@/components/site/HowItWorks";
+import { Reveal } from "@/components/site/Reveal";
 import { services } from "@/lib/site-data";
 import servicesImg from "@/assets/services.jpg";
 import teamImg from "@/assets/team.jpg";
@@ -16,8 +17,8 @@ const imgs = [servicesImg, teamImg, professional, cityImg, heroImg, founder];
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Stephen Accounting & Tax Services" },
-      { name: "description", content: "Bookkeeping, tax preparation, payroll, business advisory, tax planning, and audit support — delivered by licensed CPAs and EAs." },
+      { title: "Services - Stephen Accounting & Tax Services" },
+      { name: "description", content: "Bookkeeping, tax preparation, payroll, business advisory, tax planning, and audit support - delivered by licensed CPAs and EAs." },
       { property: "og:title", content: "Our Services" },
       { property: "og:description", content: "Full-service accounting and tax practice for growing businesses." },
     ],
@@ -31,7 +32,7 @@ function ServicesPage() {
       <PageHero
         eyebrow="What We Do"
         title="Full-service accounting, tax, and advisory."
-        subtitle="Six core practice areas, one integrated team. Whether you need clean books, aggressive tax planning, or CFO-level guidance — we're built to deliver."
+        subtitle="Six core practice areas, one integrated team. Whether you need clean books, aggressive tax planning, or CFO-level guidance - we're built to deliver."
         breadcrumb="Services"
       />
 
@@ -41,45 +42,49 @@ function ServicesPage() {
             const flipped = i % 2 === 1;
             const Icon = s.icon;
             return (
-              <article
-                key={s.slug}
-                className="grid items-center gap-10 md:grid-cols-2 md:gap-16"
-              >
-                <div className={`overflow-hidden rounded-3xl ${flipped ? "md:order-2" : ""}`}>
-                  <img
-                    src={imgs[i % imgs.length]}
-                    alt={s.title}
-                    className="h-80 w-full object-cover md:h-[28rem]"
-                    loading="lazy"
-                  />
-                </div>
-                <div>
-                  <div className="flex items-center gap-3">
-                    <div className="grid h-12 w-12 place-items-center rounded-xl bg-gold text-navy">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <span className="eyebrow">0{i + 1}</span>
+              <Reveal key={s.slug} from={flipped ? "right" : "left"}>
+                <article
+                  id={s.slug}
+                  className="scroll-mt-28 grid items-center gap-10 md:grid-cols-2 md:gap-16"
+                >
+                  <div className={`overflow-hidden rounded-3xl ${flipped ? "md:order-2" : ""}`}>
+                    <img
+                      src={imgs[i % imgs.length]}
+                      alt={s.title}
+                      className="h-80 w-full object-cover md:h-[28rem]"
+                      loading="lazy"
+                    />
                   </div>
-                  <h2 className="mt-5 font-serif text-3xl font-bold leading-tight text-navy md:text-4xl">
-                    {s.title}
-                  </h2>
-                  <p className="mt-4 text-muted-foreground leading-relaxed">{s.description}</p>
-                  <ul className="mt-6 space-y-3">
-                    {s.bullets.map((b) => (
-                      <li key={b} className="flex gap-3 text-sm text-navy/85">
-                        <span className="mt-1 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-gold/15 text-gold">
-                          <Check className="h-3 w-3" strokeWidth={3} />
-                        </span>
-                        {b}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link to="/contact" className="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-gold">
-                    Discuss this service
-                    <ArrowRight className="h-3.5 w-3.5" />
-                  </Link>
-                </div>
-              </article>
+                  <div>
+                    <div className="flex items-center gap-3">
+                      <div className="grid h-12 w-12 place-items-center rounded-xl bg-gold text-navy">
+                        <Icon className="h-5 w-5" />
+                      </div>
+                      <span className="eyebrow">0{i + 1}</span>
+                    </div>
+                    <h2 className="mt-5 font-serif text-3xl font-bold leading-tight text-navy md:text-4xl">
+                      {s.title}
+                    </h2>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">{s.description}</p>
+                    <ul className="mt-6 space-y-3">
+                      {s.bullets.map((b, j) => (
+                        <Reveal key={b} delay={j * 60}>
+                          <li className="flex gap-3 text-sm text-navy/85">
+                            <span className="mt-1 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-gold/15 text-gold">
+                              <Check className="h-3 w-3" strokeWidth={3} />
+                            </span>
+                            {b}
+                          </li>
+                        </Reveal>
+                      ))}
+                    </ul>
+                    <Link to="/contact" className="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-gold group/link">
+                      Discuss this service
+                      <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/link:translate-x-1" />
+                    </Link>
+                  </div>
+                </article>
+              </Reveal>
             );
           })}
         </div>

@@ -64,7 +64,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Stephen Accounting & Tax Services — Trusted Financial Advisory" },
+      { title: "Stephen Accounting & Tax Services - Trusted Financial Advisory" },
       { name: "description", content: "Premium accounting, tax preparation, and business advisory services from a firm trusted by 250+ businesses. Book a free consultation today." },
       { name: "author", content: "Stephen Accounting & Tax Services" },
       { property: "og:title", content: "Stephen Accounting & Tax Services" },
@@ -74,12 +74,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+
+      { rel: "icon", href: "/Favicon.jpg", type: "image/jpeg" },
+      { rel: "apple-touch-icon", href: "/Favicon.jpg" },
+
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&display=swap",
       },
     ],
   }),

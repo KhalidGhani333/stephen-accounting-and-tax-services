@@ -17,12 +17,13 @@ export function Footer() {
       <div className="container-x relative pt-24 pb-10">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
-            <div className="flex items-center gap-3">
-              <div className="grid h-10 w-10 place-items-center rounded-lg bg-gold">
-                <span className="font-serif text-lg font-bold text-navy">S</span>
-              </div>
-              <span className="font-serif text-xl font-semibold">Stephen & Co.</span>
-            </div>
+            <Link to="/" aria-label="Home" className="inline-block rounded-xl bg-white px-3 py-2">
+              <img
+                src="/logo.png"
+                alt="Stephen Accounting and Tax Service"
+                className="h-10 w-auto"
+              />
+            </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/70">
               Accounting, tax, and advisory services for growing businesses and the individuals
               who run them. Trusted by 250+ clients across the country.
@@ -78,11 +79,11 @@ export function Footer() {
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Newsletter</h3>
             <p className="mt-5 text-sm text-white/70">
-              Quarterly tax tips and planning reminders — no spam, unsubscribe anytime.
+              Quarterly tax tips and planning reminders - no spam, unsubscribe anytime.
             </p>
             {sent ? (
               <p className="mt-4 rounded-lg border border-gold/40 bg-gold/10 px-4 py-3 text-sm text-gold">
-                Thanks — you're on the list.
+                Thanks - you're on the list.
               </p>
             ) : (
               <div className="mt-4 flex overflow-hidden rounded-full border border-white/15 bg-white/5">

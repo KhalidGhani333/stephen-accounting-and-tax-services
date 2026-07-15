@@ -5,8 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-serif: "Playfair Display", "Lora", ui-serif, Georgia, serif;
-  --font-sans: "Inter", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Merriweather", Georgia, ui-serif, serif;
+  --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -110,7 +110,8 @@
   }
   h1, h2, h3, h4, .font-serif {
     font-family: var(--font-serif);
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
   }
 }
 
@@ -128,13 +129,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.85rem 1.6rem;
+  gap: 0.4rem;
+  padding: 0.6rem 1.25rem;
   border-radius: 9999px;
   background: var(--gold);
   color: var(--gold-foreground);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   transition: all 200ms ease;
   box-shadow: 0 10px 25px -12px oklch(0.74 0.14 82 / 0.55);
   &:hover {
@@ -148,13 +149,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.85rem 1.6rem;
+  gap: 0.4rem;
+  padding: 0.6rem 1.25rem;
   border-radius: 9999px;
   border: 1.5px solid oklch(1 0 0 / 0.5);
   color: oklch(1 0 0);
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   transition: all 200ms ease;
   &:hover {
     background: oklch(1 0 0 / 0.1);
@@ -166,13 +167,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.85rem 1.6rem;
+  gap: 0.4rem;
+  padding: 0.6rem 1.25rem;
   border-radius: 9999px;
   border: 1.5px solid var(--navy);
   color: var(--navy);
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   transition: all 200ms ease;
   &:hover {
     background: var(--navy);
@@ -211,10 +212,24 @@
   from { opacity: 0; }
   to { opacity: 1; }
 }
+@keyframes video-zoom {
+  from { transform: scale(1.08); }
+  to   { transform: scale(1); }
+}
+@keyframes slide-up-hero {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
 @utility animate-fade-up {
   animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 @utility animate-fade-in {
   animation: fade-in 0.8s ease-out both;
+}
+@utility animate-video-zoom {
+  animation: video-zoom 10s ease-out forwards;
+}
+@utility animate-hero {
+  animation: slide-up-hero 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
 }

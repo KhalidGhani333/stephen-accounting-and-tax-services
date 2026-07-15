@@ -28,13 +28,12 @@ export function Navbar() {
       }`}
     >
       <div className="container-x flex h-20 items-center justify-between gap-4">
-        <Link to="/" className="flex items-center gap-2 shrink-0" aria-label="Home">
-          <div className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-navy">
-            <span className="font-serif text-lg font-bold text-gold">S</span>
-          </div>
-          <span className="hidden font-serif text-lg font-semibold text-navy sm:inline">
-            Stephen <span className="text-gold">&</span> Co.
-          </span>
+        <Link to="/" className="flex items-center shrink-0" aria-label="Home">
+          <img
+            src="/logo.png"
+            alt="Stephen Accounting and Tax Service"
+            className="h-12 w-auto"
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">

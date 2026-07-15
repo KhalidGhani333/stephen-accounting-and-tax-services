@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Award, Compass, HeartHandshake, ShieldCheck, Sparkles, Target } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { ConsultationCTA } from "@/components/site/ConsultationCTA";
+import { Reveal } from "@/components/site/Reveal";
 import founder from "@/assets/founder.jpg";
 import professional from "@/assets/professional.jpg";
 import team from "@/assets/team.jpg";
@@ -9,8 +10,8 @@ import team from "@/assets/team.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Stephen Accounting & Tax Services" },
-      { name: "description", content: "Meet the licensed CPAs and advisors behind Stephen Accounting & Tax Services — 20+ years serving businesses with clarity and precision." },
+      { title: "About - Stephen Accounting & Tax Services" },
+      { name: "description", content: "Meet the licensed CPAs and advisors behind Stephen Accounting & Tax Services - 20+ years serving businesses with clarity and precision." },
       { property: "og:title", content: "About Stephen Accounting & Tax Services" },
       { property: "og:description", content: "Our story, team, and the values that drive our practice." },
     ],
@@ -41,68 +42,81 @@ function About() {
       <PageHero
         eyebrow="Our Firm"
         title="A financial partner built on trust and precision."
-        subtitle="For more than two decades, Stephen Accounting & Tax Services has helped business owners and individuals navigate every stage of their financial life — with honest advice and meticulous execution."
+        subtitle="For more than two decades, Stephen Accounting & Tax Services has helped business owners and individuals navigate every stage of their financial life - with honest advice and meticulous execution."
         breadcrumb="About"
       />
 
       {/* Story + mission */}
       <section className="container-x py-20 md:py-28">
         <div className="grid gap-14 md:grid-cols-2 md:gap-20">
-          <div>
-            <p className="eyebrow">Our Story</p>
-            <h2 className="mt-5 font-serif text-3xl font-bold leading-tight text-navy md:text-4xl">
-              From a single office to a firm serving 500+ clients nationwide.
-            </h2>
-            <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
-              <p>
-                Stephen Reeves founded the firm in 2004 with a stubborn belief: small and mid-market
-                businesses deserve the same caliber of advisory work that only Fortune 500 companies
-                seemed to receive. What began as a one-person practice above a corner bookstore has
-                grown into a team of licensed CPAs, EAs, and analysts serving hundreds of clients
-                across the United States.
-              </p>
-              <p>
-                We've built the firm slowly and deliberately. Every hire, every process, every piece
-                of software has one purpose — to give clients answers they can trust and a partner
-                who picks up the phone.
-              </p>
+          <Reveal from="left">
+            <div>
+              <p className="eyebrow">Our Story</p>
+              <h2 className="mt-5 font-serif text-3xl font-bold leading-tight text-navy md:text-4xl">
+                From a single office to a firm serving 500+ clients nationwide.
+              </h2>
+              <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  Stephen Reeves founded the firm in 2004 with a stubborn belief: small and mid-market
+                  businesses deserve the same caliber of advisory work that only Fortune 500 companies
+                  seemed to receive. What began as a one-person practice above a corner bookstore has
+                  grown into a team of licensed CPAs, EAs, and analysts serving hundreds of clients
+                  across the United States.
+                </p>
+                <p>
+                  We've built the firm slowly and deliberately. Every hire, every process, every piece
+                  of software has one purpose - to give clients answers they can trust and a partner
+                  who picks up the phone.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="rounded-3xl bg-navy p-10 text-white md:p-12">
-            <p className="eyebrow text-gold">Our Mission</p>
-            <p className="mt-6 font-serif text-2xl leading-snug md:text-3xl">
-              To bring calm confidence to every client's financial life — through precise numbers,
-              proactive strategy, and relationships that outlast tax seasons.
-            </p>
-            <div className="mt-8 grid grid-cols-3 gap-6 border-t border-white/10 pt-8">
-              <Stat n="22" l="Years serving" />
-              <Stat n="500+" l="Active clients" />
-              <Stat n="14" l="Team members" />
+          </Reveal>
+          <Reveal from="right">
+            <div className="rounded-3xl bg-navy p-10 text-white md:p-12">
+              <p className="eyebrow text-gold">Our Mission</p>
+              <p className="mt-6 font-serif text-2xl leading-snug md:text-3xl">
+                To bring calm confidence to every client's financial life - through precise numbers,
+                proactive strategy, and relationships that outlast tax seasons.
+              </p>
+              <div className="mt-8 grid grid-cols-3 gap-6 border-t border-white/10 pt-8">
+                <Stat n="22" l="Years serving" />
+                <Stat n="500+" l="Active clients" />
+                <Stat n="14" l="Team members" />
+              </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* Team */}
       <section className="bg-cream py-20 md:py-28">
         <div className="container-x">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="eyebrow">Leadership</p>
-            <h2 className="mt-4 font-serif text-3xl font-bold text-navy md:text-5xl">
-              The people behind your numbers
-            </h2>
-          </div>
+          <Reveal from="fade">
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="eyebrow">Leadership</p>
+              <h2 className="mt-4 font-serif text-3xl font-bold text-navy md:text-5xl">
+                The people behind your numbers
+              </h2>
+            </div>
+          </Reveal>
           <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {teamMembers.map((m) => (
-              <article key={m.name} className="card-elevated overflow-hidden bg-white">
-                <div className="aspect-[4/5] overflow-hidden bg-secondary">
-                  <img src={m.img} alt={m.name} className="h-full w-full object-cover" loading="lazy" />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-serif text-xl font-semibold text-navy">{m.name}</h3>
-                  <p className="mt-1 text-sm text-teal">{m.role}</p>
-                </div>
-              </article>
+            {teamMembers.map((m, i) => (
+              <Reveal key={m.name} delay={i * 110}>
+                <article className="card-elevated overflow-hidden bg-white">
+                  <div className="aspect-[4/5] overflow-hidden bg-secondary">
+                    <img
+                      src={m.img}
+                      alt={m.name}
+                      className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-serif text-xl font-semibold text-navy">{m.name}</h3>
+                    <p className="mt-1 text-sm text-teal">{m.role}</p>
+                  </div>
+                </article>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -110,21 +124,25 @@ function About() {
 
       {/* Values */}
       <section className="container-x py-20 md:py-28">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="eyebrow">Core Values</p>
-          <h2 className="mt-4 font-serif text-3xl font-bold text-navy md:text-5xl">
-            What we stand for, in every engagement
-          </h2>
-        </div>
+        <Reveal from="fade">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="eyebrow">Core Values</p>
+            <h2 className="mt-4 font-serif text-3xl font-bold text-navy md:text-5xl">
+              What we stand for, in every engagement
+            </h2>
+          </div>
+        </Reveal>
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {values.map(({ Icon, title, text }) => (
-            <div key={title} className="rounded-2xl border border-border bg-white p-7 transition hover:border-gold/40 hover:shadow-card">
-              <div className="grid h-12 w-12 place-items-center rounded-xl bg-gold/15 text-gold">
-                <Icon className="h-5 w-5" />
+          {values.map(({ Icon, title, text }, i) => (
+            <Reveal key={title} delay={i * 70}>
+              <div className="rounded-2xl border border-border bg-white p-7 transition hover:border-gold/40 hover:shadow-card h-full">
+                <div className="grid h-12 w-12 place-items-center rounded-xl bg-gold/15 text-gold">
+                  <Icon className="h-5 w-5" />
+                </div>
+                <h3 className="mt-5 font-serif text-xl font-semibold text-navy">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{text}</p>
               </div>
-              <h3 className="mt-5 font-serif text-xl font-semibold text-navy">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{text}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </section>
@@ -132,12 +150,16 @@ function About() {
       {/* Credentials */}
       <section className="bg-navy py-14 text-white">
         <div className="container-x">
-          <p className="eyebrow text-gold">Credentials & Certifications</p>
-          <div className="mt-6 flex flex-wrap gap-x-10 gap-y-4">
-            {credentials.map((c) => (
-              <span key={c} className="font-serif text-lg font-medium text-white/85">{c}</span>
-            ))}
-          </div>
+          <Reveal from="fade">
+            <p className="eyebrow text-gold">Credentials & Certifications</p>
+            <div className="mt-6 flex flex-wrap gap-x-10 gap-y-4">
+              {credentials.map((c, i) => (
+                <Reveal key={c} delay={i * 60} from="bottom">
+                  <span className="font-serif text-lg font-medium text-white/85">{c}</span>
+                </Reveal>
+              ))}
+            </div>
+          </Reveal>
         </div>
       </section>
 

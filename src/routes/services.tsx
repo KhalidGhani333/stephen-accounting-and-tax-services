@@ -1,18 +1,8 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, Navigate } from "@tanstack/react-router";
 import { ArrowRight, Check } from "lucide-react";
-import { PageHero } from "@/components/site/PageHero";
 import { ConsultationCTA } from "@/components/site/ConsultationCTA";
-import { HowItWorks } from "@/components/site/HowItWorks";
 import { Reveal } from "@/components/site/Reveal";
 import { services } from "@/lib/site-data";
-import servicesImg from "@/assets/services.jpg";
-import teamImg from "@/assets/team.jpg";
-import cityImg from "@/assets/city.jpg";
-import professional from "@/assets/professional.jpg";
-import heroImg from "@/assets/hero.jpg";
-import founder from "@/assets/founder.jpg";
-
-const imgs = [servicesImg, teamImg, professional, cityImg, heroImg, founder];
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -23,78 +13,61 @@ export const Route = createFileRoute("/services")({
       { property: "og:description", content: "Full-service accounting and tax practice for growing businesses." },
     ],
   }),
-  component: ServicesPage,
+  component: ServicesRedirect,
 });
 
-function ServicesPage() {
+function ServicesRedirect() {
+  return <Navigate to="/" hash="services" replace />;
+}
+
+export function ServicesSection() {
   return (
-    <>
-      <PageHero
-        eyebrow="What We Do"
-        title="Full-service accounting, tax, and advisory."
-        subtitle="Six core practice areas, one integrated team. Whether you need clean books, aggressive tax planning, or CFO-level guidance - we're built to deliver."
-        breadcrumb="Services"
-      />
-
-      <section className="container-x py-16 md:py-24">
-        <div className="space-y-24 md:space-y-32">
-          {services.map((s, i) => {
-            const flipped = i % 2 === 1;
-            const Icon = s.icon;
-            return (
-              <Reveal key={s.slug} from={flipped ? "right" : "left"}>
-                <article
-                  id={s.slug}
-                  className="scroll-mt-28 grid items-center gap-10 md:grid-cols-2 md:gap-16"
-                >
-                  <div className={`overflow-hidden rounded-3xl ${flipped ? "md:order-2" : ""}`}>
-                    <img
-                      src={imgs[i % imgs.length]}
-                      alt={s.title}
-                      className="h-80 w-full object-cover md:h-[28rem]"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-3">
-                      <div className="grid h-12 w-12 place-items-center rounded-xl bg-gold text-navy">
-                        <Icon className="h-5 w-5" />
-                      </div>
-                      <span className="eyebrow">0{i + 1}</span>
-                    </div>
-                    <h2 className="mt-5 font-serif text-3xl font-bold leading-tight text-navy md:text-4xl">
-                      {s.title}
-                    </h2>
-                    <p className="mt-4 text-muted-foreground leading-relaxed">{s.description}</p>
-                    <ul className="mt-6 space-y-3">
-                      {s.bullets.map((b, j) => (
-                        <Reveal key={b} delay={j * 60}>
-                          <li className="flex gap-3 text-sm text-navy/85">
-                            <span className="mt-1 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-gold/15 text-gold">
-                              <Check className="h-3 w-3" strokeWidth={3} />
-                            </span>
-                            {b}
-                          </li>
-                        </Reveal>
-                      ))}
-                    </ul>
-                    <Link to="/contact" className="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-gold group/link">
-                      Discuss this service
-                      <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/link:translate-x-1" />
-                    </Link>
-                  </div>
-                </article>
-              </Reveal>
-            );
-          })}
+    <section className="container-x py-16 md:py-20">
+      <Reveal from="fade">
+        <div className="mx-auto max-w-2xl text-center mb-12">
+          <p className="eyebrow">What We Do</p>
+          <h2 className="mt-4 font-serif text-3xl font-bold text-navy md:text-4xl">
+            Full-service accounting, tax & advisory
+          </h2>
+          <p className="mt-3 text-muted-foreground">
+            Six core practice areas, one integrated team   built to deliver.
+          </p>
         </div>
-      </section>
+      </Reveal>
 
-      <div className="bg-cream">
-        <HowItWorks />
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {services.map((s, i) => {
+          const Icon = s.icon;
+          return (
+            <Reveal key={s.slug} delay={i * 60}>
+              <article
+                id={s.slug}
+                className="scroll-mt-28 rounded-2xl border border-border bg-white p-7 transition hover:border-gold/40 hover:shadow-card h-full flex flex-col"
+              >
+                <div className="grid h-12 w-12 place-items-center rounded-xl bg-gold text-navy">
+                  <Icon className="h-5 w-5" />
+                </div>
+                <h3 className="mt-5 font-serif text-xl font-semibold text-navy">{s.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground flex-1">{s.short}</p>
+                <ul className="mt-4 space-y-2">
+                  {s.bullets.slice(0, 3).map((b) => (
+                    <li key={b} className="flex gap-2 text-xs text-navy/75">
+                      <span className="mt-1 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-gold/15 text-gold">
+                        <Check className="h-2.5 w-2.5" strokeWidth={3} />
+                      </span>
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+                <Link to="/contact" className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-gold group/link self-start">
+                  Get Started
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/link:translate-x-1" />
+                </Link>
+              </article>
+            </Reveal>
+          );
+        })}
       </div>
-
-      <ConsultationCTA />
-    </>
+    </section>
   );
 }

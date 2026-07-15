@@ -45,11 +45,10 @@ export function Footer() {
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Quick Links</h3>
             <ul className="mt-5 space-y-3 text-sm text-white/80">
-              <li><Link to="/" className="hover:text-gold">Home</Link></li>
-              <li><Link to="/about" className="hover:text-gold">About</Link></li>
-              <li><Link to="/services" className="hover:text-gold">Services</Link></li>
-              <li><Link to="/resources" className="hover:text-gold">Tax Resources</Link></li>
-              <li><Link to="/contact" className="hover:text-gold">Contact</Link></li>
+              <li><Link to="/" hash="home" className="hover:text-gold">Home</Link></li>
+              <li><Link to="/" hash="about" className="hover:text-gold">About</Link></li>
+              <li><Link to="/" hash="services" className="hover:text-gold">Services</Link></li>
+              <li><Link to="/" hash="contact" className="hover:text-gold">Contact</Link></li>
             </ul>
           </div>
 
@@ -62,7 +61,7 @@ export function Footer() {
               </li>
               <li className="flex gap-3">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-                <a href="tel:+18005550142">(800) 555-0142</a>
+                <a href="tel:+14694077051">469-407-7051</a>
               </li>
               <li className="flex gap-3">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-gold" />

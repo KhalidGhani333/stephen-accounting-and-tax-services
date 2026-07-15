@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, Navigate } from "@tanstack/react-router";
 import { ArrowRight, CalendarDays, Download, FileText, Minus, Plus } from "lucide-react";
 import { useState } from "react";
 import { PageHero } from "@/components/site/PageHero";
@@ -18,8 +18,12 @@ export const Route = createFileRoute("/resources")({
       { property: "og:description", content: "Practical answers, deadlines, and downloads from our team." },
     ],
   }),
-  component: Resources,
+  component: ResourcesRedirect,
 });
+
+function ResourcesRedirect() {
+  return <Navigate to="/" hash="resources" replace />;
+}
 
 const helpful = [
   { Icon: CalendarDays, title: "2026 Tax Deadline Calendar", text: "Every federal filing and estimated-tax due date, sorted by entity type.", label: "View Calendar" },
@@ -29,7 +33,7 @@ const helpful = [
 
 const coverImgs = [servicesImg, teamImg, cityImg];
 
-function Resources() {
+export function ResourcesSection() {
   return (
     <>
       <PageHero
@@ -85,7 +89,7 @@ function Resources() {
                     <img
                       src={coverImgs[i % coverImgs.length]}
                       alt=""
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                       loading="lazy"
                     />
                     <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-xs font-semibold text-teal">

@@ -8,12 +8,12 @@ export function ConsultationCTA() {
     <section className="container-x py-20 md:py-28">
       <Reveal from="bottom" threshold={0.08}>
         <div className="relative overflow-hidden rounded-3xl bg-navy shadow-elegant">
-          <div className="grid items-center gap-0 md:grid-cols-2">
-            <div className="relative order-2 h-64 md:order-1 md:h-full md:min-h-[420px]">
+          <div className="grid items-stretch gap-0 md:grid-cols-2">
+            <div className="relative order-2 h-64 md:order-1 md:h-full">
               <img
                 src={professional}
                 alt="Senior accounting advisor"
-                className="absolute inset-0 h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover object-top"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/40 to-transparent md:from-transparent md:to-navy" />
@@ -32,8 +32,8 @@ export function ConsultationCTA() {
                   Schedule Consultation
                   <ArrowRight className="h-4 w-4" />
                 </Link>
-                <a href="tel:+18005550142" className="btn-outline-light">
-                  Call (800) 555-0142
+                <a href="tel:+14694077051" className="btn-outline-light">
+                  Call 469-407-7051
                 </a>
               </div>
             </div>

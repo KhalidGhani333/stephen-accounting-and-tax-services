@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "Skill(claude-in-chrome)",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "WebSearch",
+      "WebFetch(domain:unsplash.com)",
+      "Bash(curl -sL \"https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&q=80\" -o \"svc-bookkeeping.jpg\")",
+      "Bash(curl -sL \"https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=900&q=80\" -o \"svc-tax-prep.jpg\")",
+      "Bash(curl -sL \"https://images.unsplash.com/photo-1551836022-4c4c79ecde51?w=900&q=80\" -o \"svc-payroll.jpg\")",
+      "Bash(curl -sL \"https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=900&q=80\" -o \"svc-advisory.jpg\")",
+      "Bash(curl -sL \"https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?w=900&q=80\" -o \"svc-tax-planning.jpg\")"
     ]
   }
 }

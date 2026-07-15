@@ -6,6 +6,9 @@ import { ArrowRight, ArrowUpRight, Check, Star } from "lucide-react";
   import teamImg from "@/assets/team.jpg";
   import servicesImg from "@/assets/services.jpg";
   import advisorImg from "@/assets/advisor.jpg";
+  import professionalImg from "@/assets/professional.jpg";
+  import team2Img from "@/assets/team2.jpg";
+  import img2 from "@/assets/2.jpg";
   import { services, articles } from "@/lib/site-data";
   import { ConsultationCTA } from "@/components/site/ConsultationCTA";
   import { Reveal } from "@/components/site/Reveal";
@@ -31,13 +34,10 @@ function Home() {
         <AboutSection />
       </section>
       <section id="services" className="scroll-mt-24 bg-cream">
-        <ServicesOverview />
+        <ServicesSection />
       </section>
       <WhyChooseUs />
       <QuoteBanner />
-      <section className="scroll-mt-24">
-        <ServicesSection />
-      </section>
       <Achievements />
       <section id="reviews" className="scroll-mt-24 bg-cream">
         <Reviews />
@@ -147,6 +147,8 @@ function Hero() {
   );
 }
 
+const serviceCardImgs = [servicesImg, cityImg, team2Img, advisorImg, professionalImg, img2];
+
 function ServicesOverview() {
   return (
     <section className="container-x py-20 md:py-28">
@@ -174,7 +176,7 @@ function ServicesOverview() {
             <article className="card-elevated group flex flex-col overflow-hidden h-full">
               <div className="relative h-40 overflow-hidden">
                 <img
-                  src={servicesImg}
+                  src={serviceCardImgs[i % serviceCardImgs.length]}
                   alt=""
                   className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
@@ -228,24 +230,6 @@ function QuoteBanner() {
           </div>
         </Reveal>
 
-        <Reveal delay={150}>
-          <div className="mt-14 flex flex-col items-start gap-6 border-t border-white/10 pt-10 sm:flex-row sm:items-center">
-            <div className="flex -space-x-3">
-              {[0,1,2,3,4].map((i) => (
-                <div
-                  key={i}
-                  className="grid h-11 w-11 place-items-center rounded-full border-2 border-navy bg-gradient-to-br from-gold to-teal font-serif text-sm font-bold text-navy"
-                >
-                  {String.fromCharCode(65 + i)}
-                </div>
-              ))}
-            </div>
-            <div>
-              <p className="font-serif text-2xl font-semibold text-white">Trusted by 250+ Businesses</p>
-              <p className="text-sm text-white/60">From family-owned shops to $50M+ operators.</p>
-            </div>
-          </div>
-        </Reveal>
       </div>
     </section>
   );

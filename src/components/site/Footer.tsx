@@ -30,7 +30,7 @@ export function Footer() {
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/70">
               Accounting, tax, and advisory services for growing businesses and the individuals
-              who run them. Trusted by 250+ clients across the country.
+              who run them. Trusted by 100+ clients across the country.
             </p>
             <div className="mt-6 flex gap-3">
               {[Linkedin, Twitter, Facebook, Instagram].map((Icon, i) => (

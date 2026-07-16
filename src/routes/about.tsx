@@ -90,9 +90,9 @@ export function AboutSection() {
               </p>
               <p className="mt-5 max-w-lg text-sm leading-relaxed text-white/70">
                 Highly accomplished Certified Public Accountant (CPA) with 20+ years of experience driving
-                financial health and strategic growth for small and medium sized businesses. Throughout his
-                career, Jonathan has helped (SMBs) optimize cashflow, streamline accounting and bookkeeping
-                operations and scale sustainability. He is dedicated to helping (SMBs) navigate financial
+                financial health and strategic growth for small and medium sized businesses (SMBs). Throughout his
+                career, Jonathan has helped SMBs optimize cashflow, streamline accounting and bookkeeping
+                operations and scale sustainability. He is dedicated to helping SMBs navigate financial
                 complexities and achieve their vision. When he is not helping businesses thrive, you can
                 find Jonathan volunteering through his church outreach ministry.
               </p>

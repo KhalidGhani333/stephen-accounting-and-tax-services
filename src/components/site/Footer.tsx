@@ -24,10 +24,10 @@ export function Footer() {
                 className="h-16 w-auto"
               />
             </Link>
-            <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-4 py-1.5">
+            {/* <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-4 py-1.5">
               <span className="h-2 w-2 rounded-full bg-gold" />
               <span className="text-xs font-semibold tracking-wide text-gold">Trusted by 100+ Clients</span>
-            </div>
+            </div> */}
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/70">
               Accounting, tax, and advisory services for growing businesses and the individuals
               who run them. Trusted by 100+ clients across the country.
@@ -113,10 +113,14 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-6 text-xs text-white/50 md:flex-row md:items-center">
           <p>© {new Date().getFullYear()} Stephen Accounting & Tax Services. All rights reserved.</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-gold">Privacy Policy</a>
-            <a href="#" className="hover:text-gold">Terms of Service</a>
-          </div>
+          <a
+            href="https://axistechgroup.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gold transition-colors"
+          >
+            Powered by AxisTechGroup
+          </a>
         </div>
       </div>
     </footer>

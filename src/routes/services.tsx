@@ -34,10 +34,10 @@ export function ServicesSection() {
         <div className="mx-auto max-w-2xl text-center mb-12">
           <p className="eyebrow">What We Do</p>
           <h2 className="mt-4 font-serif text-3xl font-bold text-navy md:text-4xl">
-            Full-service accounting, tax &amp; advisory
+            Full-service accounting & bookkeeping, tax and business advisory
           </h2>
           <p className="mt-3 text-muted-foreground">
-            Six core practice areas, one integrated team — built to deliver.
+            Six core practice areas, one integrated team    built to deliver.
           </p>
         </div>
       </Reveal>

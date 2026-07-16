@@ -89,9 +89,12 @@ export function AboutSection() {
                 Accountant&nbsp;•&nbsp;Entrepreneur&nbsp;•&nbsp;Investor&nbsp;•&nbsp;Business Strategist
               </p>
               <p className="mt-5 max-w-lg text-sm leading-relaxed text-white/70">
-                With a Master's degree in Accounting and over two decades of hands-on experience,
-                Jonathan built this firm around one principle   every client deserves clear numbers,
-                honest advice, and a partner who is as invested in their success as they are.
+                Highly accomplished Certified Public Accountant (CPA) with 20+ years of experience driving
+                financial health and strategic growth for small and medium sized businesses. Throughout his
+                career, Jonathan has helped SMBs optimize cashflow, streamline accounting and bookkeeping
+                operations and scale sustainability. He is dedicated to helping SMBs navigate financial
+                complexities and achieve their vision. When he is not helping businesses thrive, you can
+                find Jonathan volunteering through his church outreach ministry.
               </p>
               <a
                 href="tel:+14694077051"

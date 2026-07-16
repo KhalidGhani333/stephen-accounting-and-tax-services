@@ -82,13 +82,13 @@ function Hero() {
               className="mt-5 font-serif text-4xl font-bold leading-[1.05] md:text-6xl lg:text-7xl animate-hero"
               style={{ animationDelay: "250ms" }}
             >
-              Accounting & Tax Solutions <span className="text-gold">You Can Trust</span>
+              Accounting & Business Solutions <span className="text-gold">You Can Trust</span>
             </h1>
             <p
               className="mt-6 max-w-xl text-lg leading-relaxed text-white/75 animate-hero"
               style={{ animationDelay: "420ms" }}
             >
-              Licensed CPAs and tax advisors helping ambitious businesses and individuals keep more of
+              Licensed CPA and Business Strategists helping ambitious businesses and individuals keep more of
               what they earn - with clarity, precision, and year-round support.
             </p>
             <div

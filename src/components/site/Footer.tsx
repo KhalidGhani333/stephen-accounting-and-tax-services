@@ -17,14 +17,18 @@ export function Footer() {
       <div className="container-x relative pt-24 pb-10">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
-            <Link to="/" aria-label="Home" className="inline-block rounded-xl bg-white px-3 py-2">
+            <Link to="/" aria-label="Home" className="inline-block rounded-2xl bg-white px-5 py-3 shadow-lg shadow-black/30">
               <img
                 src="/logo.png"
                 alt="Stephen Accounting and Tax Service"
-                className="h-10 w-auto"
+                className="h-16 w-auto"
               />
             </Link>
-            <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/70">
+            <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-4 py-1.5">
+              <span className="h-2 w-2 rounded-full bg-gold" />
+              <span className="text-xs font-semibold tracking-wide text-gold">Trusted by 100+ Clients</span>
+            </div>
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/70">
               Accounting, tax, and advisory services for growing businesses and the individuals
               who run them. Trusted by 250+ clients across the country.
             </p>

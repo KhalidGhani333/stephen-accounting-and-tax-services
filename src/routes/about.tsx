@@ -20,10 +20,10 @@ function AboutRedirect() {
 }
 
 const values = [
-  { Icon: ShieldCheck, title: "Integrity", text: "Straight answers, transparent fees, and advice we would give a family member." },
-  { Icon: Target, title: "Precision", text: "Every number reviewed, every filing double-checked before it leaves our office." },
-  { Icon: HeartHandshake, title: "Partnership", text: "We win when you win. Long-term relationships beat one-off transactions." },
-  { Icon: Sparkles, title: "Excellence", text: "Continuing education, modern tools, and a standard that raises every year." },
+  { Icon: ShieldCheck, title: "Integrity", text: "Honest advice, clear pricing, and the same care we would give our own family." },
+  { Icon: Target, title: "Precision", text: "Every number reviewed. Every filing carefully checked. Every detail handled with accuracy before it leaves our office." },
+  { Icon: HeartHandshake, title: "Partnership", text: "Your goals become our goals. We build lasting relationships and remain committed to your success at every stage." },
+  { Icon: Sparkles, title: "Excellence", text: "Continuous learning. Modern tools. Higher standards. Better service and stronger results, year after year." },
 ];
 
 export function AboutSection() {
@@ -34,7 +34,7 @@ export function AboutSection() {
           <div>
             <p className="eyebrow">Our Story</p>
             <h2 className="mt-4 font-serif text-3xl font-bold leading-tight text-navy md:text-4xl">
-              From a single office to a firm serving 500+ clients nationwide.
+              From a single office to a firm serving 100+ clients nationwide.
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
              Jonathan Stephen founded the firm with one belief: small and mid-market businesses
@@ -44,7 +44,7 @@ export function AboutSection() {
             </p>
             <div className="mt-8 grid grid-cols-3 gap-6 border-t border-border pt-8">
               <Stat n="22" l="Years serving" />
-              <Stat n="500+" l="Active clients" />
+              <Stat n="100+" l="Active clients" />
               <Stat n="14" l="Team members" />
             </div>
           </div>
@@ -91,8 +91,8 @@ export function AboutSection() {
               <p className="mt-5 max-w-lg text-sm leading-relaxed text-white/70">
                 Highly accomplished Certified Public Accountant (CPA) with 20+ years of experience driving
                 financial health and strategic growth for small and medium sized businesses. Throughout his
-                career, Jonathan has helped SMBs optimize cashflow, streamline accounting and bookkeeping
-                operations and scale sustainability. He is dedicated to helping SMBs navigate financial
+                career, Jonathan has helped (SMBs) optimize cashflow, streamline accounting and bookkeeping
+                operations and scale sustainability. He is dedicated to helping (SMBs) navigate financial
                 complexities and achieve their vision. When he is not helping businesses thrive, you can
                 find Jonathan volunteering through his church outreach ministry.
               </p>

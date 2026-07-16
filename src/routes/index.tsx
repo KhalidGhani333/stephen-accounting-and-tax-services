@@ -221,12 +221,11 @@ function QuoteBanner() {
           <div className="max-w-4xl">
             <span className="font-serif text-6xl leading-none text-gold">"</span>
             <p className="mt-2 font-serif text-2xl leading-[1.35] text-white md:text-4xl lg:text-[2.75rem]">
-              Trusted accounting is not paperwork. It's the quiet confidence of knowing every number
-              in your business tells the truth - and works for you.
+              Trusted accounting is more than accurate numbers - it is the financial clarity and confidence that help build a stronger business.”
             </p>
             <p className="mt-8 text-sm uppercase tracking-[0.2em] text-gold">
               - Jonathan Stephen MSc. CPA <br />
-              
+
             </p>
           </div>
         </Reveal>
@@ -240,7 +239,7 @@ function WhyChooseUs() {
   const points = [
     { title: "Experienced Professionals", text: "Licensed CPAs and EAs with 20+ years advising businesses across industries." },
     { title: "Accurate & Transparent Processes", text: "Documented workflows, fixed-fee pricing, and quarterly reviews - no surprises." },
-    { title: "Tailored Solutions", text: "We build service plans around your entity structure, goals, and growth stage." },
+    { title: "Tailored Solutions", text: "We build service plans around your entity structure, goals, and growth Objective." },
     { title: "Timely Filing", text: "Deadlines tracked and communicated weeks in advance. We file early, not late." },
   ];
   return (
@@ -253,8 +252,8 @@ function WhyChooseUs() {
               Why Businesses Trust Our Expertise
             </h2>
             <p className="mt-5 max-w-md text-muted-foreground">
-              Two decades of building long-term partnerships with clients who need a firm that
-              treats their business like it's our own.
+
+              Two decades of building long-term partnerships and delivering results that help businesses achieve their objectives.
             </p>
             <div className="mt-8 overflow-hidden rounded-3xl">
               <img
@@ -288,10 +287,10 @@ function WhyChooseUs() {
 
 function Achievements() {
   const stats = [
-    ["500+", "Businesses Served"],
-    ["12M+", "Transactions Processed"],
+    ["100+", "Businesses Served"],
+    ["1M+", "Transactions Processed"],
     ["95%", "Client Satisfaction"],
-    ["300+", "Tax Strategies Implemented"],
+    ["150+", "Tax Strategies Implemented"],
   ];
   return (
     <section className="relative overflow-hidden bg-navy py-20 text-white md:py-28">
@@ -345,14 +344,14 @@ function Reviews() {
               What Our Clients Say
             </h2>
             <p className="mt-3 text-muted-foreground">
-              Trusted by 500+ businesses   here's what they're saying about us.
+              Trusted by 100+ businesses   here's what they're saying about us.
             </p>
             <div className="mt-5 flex items-center justify-center gap-1 text-gold">
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star key={i} className="h-5 w-5 fill-current" />
               ))}
               <span className="ml-2 font-serif text-lg font-bold text-navy">5.0</span>
-              <span className="ml-1 text-sm text-muted-foreground">· 200+ reviews</span>
+              <span className="ml-1 text-sm text-muted-foreground">· 50+ reviews</span>
             </div>
           </div>
         </Reveal>
